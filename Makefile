@@ -1,5 +1,7 @@
 EXOS =	exo1.cpp \
-		exo2.cpp 
+		exo2.cpp \
+		exo3.cpp \
+		exo4.cpp
 
 BINS = $(EXOS:%.cpp=%)
 
