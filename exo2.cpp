@@ -15,7 +15,7 @@ public:
 
 	MySafeIntArray(MySafeIntArray &&a)
 	{
-		// @HERE: fill this move constructor !!!
+        // @HERE: fill this move constructor !!!
 	}
 
 	~MySafeIntArray()

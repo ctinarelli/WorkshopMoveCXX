@@ -43,6 +43,6 @@ int main(int, const char * const [])
 {
 	MyBigClass c;
 
-	doSomethingWithMyBigClass(c); // @HERE: change something here to make it faster !!!
+	doSomethingWithMyBigClass(std::move(c)); // @HERE: change something here to make it faster !!!
 	return 0;
 }
