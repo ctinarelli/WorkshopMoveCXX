@@ -6,7 +6,7 @@ EXOS =	exo1.cpp \
 BINS = $(EXOS:%.cpp=%)
 
 %:	%.cpp
-	g++ -O0 -g3 $< -o $@
+	g++ -fno-elide-constructors -O0 -g3 $< -o $@
 
 all: $(BINS)
 
