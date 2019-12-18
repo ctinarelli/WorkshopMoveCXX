@@ -1,11 +1,18 @@
 #include <iostream>
 #include <array>
+#include <tuple>
 
 class DummyClass
 {
 public:
     DummyClass() : x(0), y(0)
     {
+    }
+
+    DummyClass(int x, int y)
+    {
+        this->x = x;
+        this->y = y;
     }
 
     int GetX() const
@@ -16,9 +23,10 @@ public:
     {
         return (y);
     }
-    std::array<int, 2> GetCoordinate()
+
+    std::tuple<int, int> GetCoordinate()
     {
-        return (std::array<int, 2>{x, y});
+        return {x, y};
     }
 private:
     int x;
@@ -27,7 +35,9 @@ private:
 
 void FunctionTwo(DummyClass &&Cl)
 {
-    auto array = Cl.GetCoordinate();
+    auto [one, two] = Cl.GetCoordinate();
+
+    std::cout << "Les coordonées sont " << one << " " << two << std::endl;
 }
 
 void FunctionOne(DummyClass &&Cl)
@@ -39,7 +49,7 @@ void FunctionOne(DummyClass &&Cl)
 
 int main()
 {
-    DummyClass Dummy;
+    DummyClass Dummy(143, 4);
 
     // @HERE: Basic change to add make this line compile.
     FunctionOne(Dummy);
