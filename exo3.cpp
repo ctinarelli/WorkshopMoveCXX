@@ -1,7 +1,3 @@
-//
-// Created by axel on 17/12/2019.
-//
-
 #include <iostream>
 #include <array>
 
@@ -31,7 +27,7 @@ private:
 
 void FunctionTwo(DummyClass &&Cl)
 {
-
+    auto array = Cl.GetCoordinate();
 }
 
 void FunctionOne(DummyClass &&Cl)
