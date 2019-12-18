@@ -56,7 +56,7 @@ int main(int, const char * const [])
 {
 	MySafeIntArray intArray(10);
 	MySafeIntArray copiedIntArray(intArray);
-	MySafeIntArray movedIntArray = makeIntArray(3);
+	MySafeIntArray movedIntArray = std::move(makeIntArray(3));
 
 	intArray.fillWith(420);
 	copiedIntArray.fillWith(69);
